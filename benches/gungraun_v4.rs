@@ -12,10 +12,7 @@ mod bench {
         black_box(Uuid::new_v4())
     }
 
-    library_benchmark_group!(
-        name = v4,
-        benchmarks = [new_v4]
-    );
+    library_benchmark_group!(name = v4, benchmarks = [new_v4]);
 }
 
 #[cfg(all(not(target_arch = "wasm32"), feature = "v4"))]
