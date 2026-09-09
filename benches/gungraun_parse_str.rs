@@ -9,7 +9,9 @@ mod bench {
 
     #[library_benchmark]
     fn parse_nil() -> Result<Uuid, uuid::Error> {
-        black_box(Uuid::parse_str(black_box("00000000000000000000000000000000")))
+        black_box(Uuid::parse_str(black_box(
+            "00000000000000000000000000000000",
+        )))
     }
 
     #[library_benchmark]
@@ -21,7 +23,9 @@ mod bench {
 
     #[library_benchmark]
     fn parse_random() -> Result<Uuid, uuid::Error> {
-        black_box(Uuid::parse_str(black_box("67e5504410b1426f9247bb680e5fe0c8")))
+        black_box(Uuid::parse_str(black_box(
+            "67e5504410b1426f9247bb680e5fe0c8",
+        )))
     }
 
     #[library_benchmark]
@@ -40,7 +44,9 @@ mod bench {
 
     #[library_benchmark]
     fn parse_invalid_len() -> Result<Uuid, uuid::Error> {
-        black_box(Uuid::parse_str(black_box("F9168C5E-CEB2-4faa-BBF-329BF39FA1E4")))
+        black_box(Uuid::parse_str(black_box(
+            "F9168C5E-CEB2-4faa-BBF-329BF39FA1E4",
+        )))
     }
 
     #[library_benchmark]
@@ -52,7 +58,9 @@ mod bench {
 
     #[library_benchmark]
     fn parse_invalid_group_len() -> Result<Uuid, uuid::Error> {
-        black_box(Uuid::parse_str(black_box("01020304-1112-2122-3132-41424344")))
+        black_box(Uuid::parse_str(black_box(
+            "01020304-1112-2122-3132-41424344",
+        )))
     }
 
     #[library_benchmark]
